@@ -1,11 +1,11 @@
 {
-  "name": "com.gemini.swagger-dto-generator",
+  "name": "com.swagger-dto-generator",
   "version": "1.0.0",
   "displayName": "Swagger DTO Generator",
   "description": "An editor tool to parse OpenAPI/Swagger schemas and generate C# DTOs in Unity.",
   "unity": "2020.3",
   "author": {
-    "name": "Gemini Assistant"
+    "name": "365chibao"
   },
   "dependencies": {
     "com.unity.nuget.newtonsoft-json": "3.0.2"
