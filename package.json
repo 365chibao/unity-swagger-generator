@@ -4,6 +4,7 @@
   "displayName": "Swagger DTO Generator",
   "description": "An editor tool to parse OpenAPI/Swagger schemas and generate C# DTOs in Unity.",
   "unity": "2020.3",
+  "license": "MIT",
   "author": {
     "name": "chibao"
   },
