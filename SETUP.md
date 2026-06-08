@@ -41,14 +41,14 @@ This document records the steps taken during development, the results of the ver
 * Added **`package.json`** containing package metadata and `com.unity.nuget.newtonsoft-json` dependency.
 * Created **`Editor/SwaggerGenerator.Editor.asmdef`** to define the Editor compilation assembly.
 * Moved C# files to the package-compliant root `Editor/` folder and cleaned up obsolete directories.
-* Run `npm pack` to compress the package into a distributable offline zip archive: `com.swagger-dto-generator-1.0.0.tgz`.
+* Run `npm pack` to compress the package into a distributable offline zip archive: `com.chibao.swagger-dto-generator-1.0.0.tgz`.
 
 ---
 
 ## 2. Package Installation Instructions
 
 ### Method A: Install via Offline Archive (`.tgz`) - Easiest
-1. Send the file **`com.swagger-dto-generator-1.0.0.tgz`** to your target PC.
+1. Send the file **`com.chibao.swagger-dto-generator-1.0.0.tgz`** to your target PC.
 2. Open your Unity Project.
 3. Open the Package Manager via **`Window -> Package Manager`**.
 4. Click the **`+`** icon (top-left) and select **`Add package from tarball...`**.

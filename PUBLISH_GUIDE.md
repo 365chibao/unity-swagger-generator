@@ -62,7 +62,7 @@ Sau khi code đã lên GitHub công khai, bạn có thể đăng ký phát hành
    * **GitHub Repository URL**: Nhập link GitHub của bạn (ví dụ: `https://github.com/tai-khoan-cua-ban/unity-swagger-generator`).
    * **Parent Branch/Tag**: Nhập tên nhánh chính là **`main`**.
    * **Sub-directory**: Để trống (vì file `package.json` nằm ngay thư mục gốc).
-   * **Package Name**: Điền đúng tên khai báo trong file `package.json` của bạn (ở đây là **`com.swagger-dto-generator`**).
+   * **Package Name**: Điền đúng tên khai báo trong file `package.json` của bạn (ở đây là **`com.chibao.swagger-dto-generator`**).
    * **Category**: Chọn danh mục phù hợp (ví dụ: `utility` or `editor-tool`).
 3. Click vào nút **`Submit`**.
 4. Hệ thống OpenUPM sẽ xếp lịch build tự động (thường mất 1 - 2 phút). Khi build thành công, Package của bạn sẽ chính thức xuất hiện trên trang chủ OpenUPM!
@@ -79,13 +79,13 @@ Họ chỉ cần thêm OpenUPM vào danh sách nguồn tải (Scoped Registries)
 2. Thêm một Registry mới:
    * **Name**: `package.openupm.com`
    * **URL**: `https://package.openupm.com`
-   * **Scope(s)**: Thêm scope **`com.swagger-dto-generator`**
+   * **Scope(s)**: Thêm scope **`com.chibao.swagger-dto-generator`**
 3. Bấm **Apply**.
 4. Mở cửa sổ **`Window -> Package Manager`**, chuyển bộ lọc sang **`Packages: My Registries`**, chọn **`Swagger DTO Generator`** và bấm **`Install`**.
 
 ### Cách B: Cài đặt nhanh qua OpenUPM CLI
 Nếu người dùng sử dụng Node.js và OpenUPM CLI, họ chỉ cần mở terminal tại thư mục dự án Unity và chạy lệnh:
 ```bash
-openupm add com.swagger-dto-generator
+openupm add com.chibao.swagger-dto-generator
 ```
 Hệ thống sẽ tự động thêm và cấu hình package vào dự án Unity của họ mà không cần mở Unity lên cấu hình thủ công!
