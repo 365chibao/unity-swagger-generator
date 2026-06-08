@@ -89,3 +89,28 @@ Nếu người dùng sử dụng Node.js và OpenUPM CLI, họ chỉ cần mở 
 openupm add com.chibao.swagger-dto-generator
 ```
 Hệ thống sẽ tự động thêm và cấu hình package vào dự án Unity của họ mà không cần mở Unity lên cấu hình thủ công!
+
+---
+
+## BƯỚC 4: Các Lỗi Thường Gặp Khi Đăng Ký (Troubleshooting)
+
+### 1. Lỗi: `licenseSpdxId must not be an empty string [package-license-spdx-id-empty]`
+*   **Nguyên nhân:** Khi bạn đăng ký trên OpenUPM, hệ thống sẽ tự động tạo một file cấu hình định dạng `.yml` dựa trên file `package.json` trong repository Git của bạn. Nếu tại thời điểm đó file `package.json` thiếu trường khai báo bản quyền `"license"`, OpenUPM sẽ báo lỗi này trong tiến trình kiểm thử.
+*   **Cách khắc phục:**
+    1. Thêm trường `"license": "MIT"` (hoặc định danh SPDX tương ứng) vào file [package.json](file:///d:/HocTap/Demo_Reseach/tool_unity-swagger-generator/package.json).
+    2. Tạo file [LICENSE](file:///d:/HocTap/Demo_Reseach/tool_unity-swagger-generator/LICENSE) chứa nội dung bản quyền ở thư mục gốc của dự án.
+    3. Commit và push code lên GitHub.
+    4. Vào Pull Request được tạo trên repo của OpenUPM (`github.com/openupm/openupm/pulls`), chuyển qua tab **Files changed**, click chọn Edit trực tiếp file cấu hình `.yml` để bổ sung cấu hình rồi Commit trực tiếp:
+       ```yaml
+       licenseSpdxId: MIT
+       licenseName: MIT License
+       ```
+       *(Hoặc đơn giản là đóng Pull Request cũ rồi thực hiện điền form Submit lại trên trang web OpenUPM).*
+
+### 2. Lỗi Git: `pathspec '...' did not match any file(s)` khi chạy git commit
+*   **Nguyên nhân:** Khi chạy lệnh commit trên môi trường Windows (PowerShell/Command Prompt), nếu bạn không viết thông điệp commit trong dấu nháy kép `""`, trình thông dịch lệnh sẽ hiểu nhầm các từ sau từ đầu tiên là tên file cần commit.
+*   **Cách khắc phục:** Luôn bao quanh thông điệp commit bằng dấu nháy kép:
+    ```bash
+    git commit -m "Update package name to com.chibao.swagger-dto-generator"
+    ```
+
